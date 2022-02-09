@@ -5,9 +5,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <script src="three.min.js"></script>
-    <script src="GLTFLoader.js"></script>
-    <script src="OrbitControls.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/OrbitControls.js"></script>
     <script>
       let scene, camera, renderer;
       function init() {
@@ -42,7 +42,7 @@
         renderer.setSize(window.innerWidth,window.innerHeight);
         document.body.appendChild(renderer.domElement);
         let loader = new THREE.GLTFLoader();
-        loader.load('https://github.com/joeisdead/kala/blob/main/Gold%20Ingot-2.gltf', function(gltf){
+        loader.load('Gold Ingot-2.gltf', function(gltf){
           ingot = gltf.scene.children[0];
           ingot.scale.set(0.5,0.5,0.5);
           scene.add(gltf.scene);
